@@ -16,7 +16,7 @@ function main() {
     var camera = new THREE.PerspectiveCamera(FOV, ASPECT, NEAR, FAR);
     camera.position.z = -5;
 
-	var renderer = new THREE.WebGLRenderer();
+    var renderer = new THREE.WebGLRenderer();
     renderer.setSize(WIDTH, HEIGHT);
     renderer.shadowMap.enabled = true;
     document.body.appendChild(renderer.domElement);
