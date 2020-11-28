@@ -53,11 +53,7 @@ function main() {
 	
 	scene.add(lampLight);
 
-	// Lamp light
-	var lampLightIntensity = 10;
-	var lampLightDistance = 100;
-
-	const directLight = new THREE.DirectionalLight(0xffffff, 0.5);
+	const directLight = new THREE.DirectionalLight(0xffffff, 0.8);
 
 	directLight.position = new THREE.Vector3(0, 1, 4);
 	
