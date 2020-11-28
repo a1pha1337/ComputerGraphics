@@ -37,7 +37,13 @@ function main() {
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.update();
     
-    loadMTLplusOBJ(URL + "materials/shop.mtl", URL + "objects/shop.obj", (shop)=>{
+    // loadMTLplusOBJ(URL + "materials/shop.mtl", URL + "objects/shop.obj", (shop)=>{
+    //     scene.add(shop);
+    // });
+
+    const objLoader = new THREE.OBJLoader();
+
+    objLoader.load(URL + "objects/shop.obj", (root)=>{
         scene.add(shop);
     });
 
