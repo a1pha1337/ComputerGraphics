@@ -57,12 +57,11 @@ function main() {
 	var lampLightIntensity = 10;
 	var lampLightDistance = 100;
 
-	const Light = new THREE.PointLight( 0xffffff, lampLightIntensity,
-			lampLightDistance);
-	Light.position.set(0, 100, 0);
-	Light.castShadow = true;
+	const directLight = new THREE.DirectionalLight(0xffffff, 0.5);
+
+	directLight.position = Object3D.DefaultUp;
 	
-	scene.add(Light);
+	scene.add(directLight);
 
 
 	// Animation loop
