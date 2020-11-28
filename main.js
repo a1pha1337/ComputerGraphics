@@ -48,7 +48,7 @@ function main() {
 
 	const lampLight = new THREE.PointLight( 0xffffff, lampLightIntensity,
 		 lampLightDistance);
-	lampLight.position.set(0, 4.5, 0);
+	lampLight.position.set(0, 100, 0);
 	lampLight.castShadow = true;
 	
 	scene.add(lampLight);
