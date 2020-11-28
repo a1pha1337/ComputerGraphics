@@ -16,6 +16,10 @@ function main() {
 	var renderer = new THREE.WebGLRenderer();
 	renderer.setSize(WIDTH, HEIGHT);
     document.body.appendChild(renderer.domElement);
+
+    // Camera controls
+	const controls = new THREE.OrbitControls(camera, renderer.domElement);
+	controls.update();
     
     var camera = new THREE.PerspectiveCamera(FOV, ASPECT, NEAR, FAR);
     camera.position.z = -5;
