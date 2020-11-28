@@ -43,7 +43,7 @@ function main() {
     });
 
 	// Lamp light
-	var lampLightIntensity = 10;
+	var lampLightIntensity = 0.5;
 	var lampLightDistance = 15;
 
 	const lampLight = new THREE.PointLight( 0xffffff, lampLightIntensity,
@@ -59,7 +59,7 @@ function main() {
 
 	const directLight = new THREE.DirectionalLight(0xffffff, 0.5);
 
-	directLight.position = Object3D.DefaultUp;
+	directLight.position = new THREE.Vector3(0, 1, 4);
 	
 	scene.add(directLight);
 
