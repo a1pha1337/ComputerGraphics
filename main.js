@@ -3,6 +3,18 @@ const HEIGHT = window.innerHeight - 100;
 
 const URL = "https://a1pha1337.github.io/ComputerGraphics/"
 
+// Load .obj model with .mtl
+function loadMTLplusOBJ(mtlURL, objURL, loadFunction) {
+	const objLoader = new THREE.OBJLoader();
+	const mtlLoader = new THREE.MTLLoader();
+	mtlLoader.load(mtlURL, (materials) => {
+		materials.preload();
+		objLoader.setMaterials(materials);
+		
+		objLoader.load(objURL, loadFunction);
+	})
+}
+
 function main() {
 	// Create scene, camera and render
 	var scene = new THREE.Scene();
@@ -23,12 +35,10 @@ function main() {
 
     // Camera controls
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
-	controls.update();
-
-    const objLoader = new THREE.OBJLoader();
-
-    objLoader.load(URL + "objects/shop.obj", (root)=>{
-        scene.add(root);
+    controls.update();
+    
+    loadMTLplusOBJ(URL + "material/shop.mtl", URL + "objects/shop.obj", (shop)=>{
+        scene.add(shop);
     });
 
     var lampIntensity = 0.9;
