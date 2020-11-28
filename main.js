@@ -11,19 +11,19 @@ function main() {
     const FOV = 90;
 	const ASPECT = WIDTH/HEIGHT;
 	const NEAR = 0.1;
-	const FAR = 1000;
+    const FAR = 1000;
+    
+    var camera = new THREE.PerspectiveCamera(FOV, ASPECT, NEAR, FAR);
+    camera.position.z = -5;
 
 	var renderer = new THREE.WebGLRenderer();
-	renderer.setSize(WIDTH, HEIGHT);
+    renderer.setSize(WIDTH, HEIGHT);
+    renderer.shadowMap.enabled = true;
     document.body.appendChild(renderer.domElement);
 
     // Camera controls
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
 	controls.update();
-    
-    var camera = new THREE.PerspectiveCamera(FOV, ASPECT, NEAR, FAR);
-    camera.position.z = -5;
-    scene.add(camera);
 
     // Create an event listener that resizes the renderer with the browser window.
     window.addEventListener('resize', function() {
