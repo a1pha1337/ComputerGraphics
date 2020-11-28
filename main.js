@@ -35,6 +35,8 @@ function main() {
     objLoader.load(URL + "objects/shop.obj", (root)=>{
         scene.add(root);
     });
+
+    renderer.render(scene, camera);
 }
 
 main();
