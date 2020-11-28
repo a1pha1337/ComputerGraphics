@@ -36,7 +36,16 @@ function main() {
         scene.add(root);
     });
 
-    renderer.render(scene, camera);
+	// Animation loop
+	var animate = function() {
+		requestAnimationFrame(animate);
+
+		controls.update();
+
+		renderer.render(scene, camera);
+	}
+
+	animate();
 }
 
 main();
