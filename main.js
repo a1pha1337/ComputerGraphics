@@ -31,7 +31,7 @@ function main() {
         scene.add(root);
     });
 
-    var lampIntensity = 1;
+    var lampIntensity = 0.1;
     var lampLightDistance = 1;
 
     const lamp = new THREE.AmbientLight(0xffffff, lampIntensity, lampLightDistance);
