@@ -31,11 +31,11 @@ function main() {
         scene.add(root);
     });
 
-    var lampIntensity = 1;
+    var lampIntensity = 10;
     var lampLightDistance = 15;
 
-    const lamp = new THREE.PointLight(0xffffff, lampIntensity, lampLightDistance);
-    lamp.position.set(0, 5, 0);
+    const lamp = new THREE.AmbientLight(0xffffff, lampIntensity, lampLightDistance);
+    lamp.position.set(34, -12, 18);
     lamp.castShadow = true;
 
     scene.add(lamp);
