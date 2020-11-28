@@ -1,6 +1,8 @@
 const WIDTH = window.innerWidth - 15;
 const HEIGHT = window.innerHeight - 100;
 
+const URL = "https://github.com/a1pha1337/ComputerGraphics/"
+
 function main() {
 	// Create scene, camera and render
 	var scene = new THREE.Scene();
@@ -28,11 +30,9 @@ function main() {
         camera.updateProjectionMatrix();
         });
 
-        const planeSize = 40;
-
     const objLoader = new THREE.OBJLoader();
 
-    objLoader.load("objects/shop.obj", (root)=>{
+    objLoader.load(URL + "objects/shop.obj", (root)=>{
         scene.add(root);
     });
 }
