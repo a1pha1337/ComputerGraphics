@@ -105,7 +105,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\boxtriangle1.png
+map_Kd текстуры\\boxtriangle1.png
 
 newmtl boxtriangle2
 Ns 225.000000
@@ -116,7 +116,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\boxtriangle2.png
+map_Kd текстуры\\boxtriangle2.png
 
 newmtl boxtriangle3
 Ns 225.000000
@@ -127,7 +127,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\boxtriangle3.png
+map_Kd boxtriangle3.png
 
 newmtl dark
 Ns 323.999994
@@ -158,7 +158,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\jar1.png
+map_Kd jar1.png
 
 newmtl jar2
 Ns 225.000000
@@ -169,7 +169,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\jar2.png
+map_Kd jar2.png
 
 newmtl jar3
 Ns 225.000000
@@ -180,7 +180,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\jar3.png
+map_Kd jar3.png
 
 newmtl openbox
 Ns 225.000000
@@ -191,7 +191,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\boxopen1.png
+map_Kd boxopen1.png
 
 newmtl openbox2
 Ns 225.000000
@@ -202,7 +202,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\boxopen2.png
+map_Kd boxopen2.png
 
 newmtl pink
 Ns 323.999994
@@ -223,7 +223,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\sweetbox.png
+map_Kd sweetbox.png
 
 newmtl wall
 Ns 323.999994
@@ -264,7 +264,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\png\\woodlight.jpg
+map_Kd woodlight.jpg
 
 newmtl бетон
 Ns 323.999994
