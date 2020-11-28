@@ -43,7 +43,7 @@ function main() {
     });
 
 	// Lamp light
-	var lampLightIntensity = 0.5;
+	var lampLightIntensity = 0.9;
 	var lampLightDistance = 15;
 
 	const lampLight = new THREE.PointLight( 0xffffff, lampLightIntensity,
