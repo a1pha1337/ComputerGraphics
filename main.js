@@ -59,7 +59,7 @@ function main() {
 
 	const Light = new THREE.PointLight( 0xffffff, lampLightIntensity,
 			lampLightDistance);
-	Light.position.set(10, 16, 0);
+	Light.position.set(100, 16, 0);
 	Light.castShadow = true;
 	
 	scene.add(Light);
