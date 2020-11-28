@@ -10,7 +10,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\для коробки закрытой2.png
+map_Kd для коробки закрытой2.png
 
 newmtl KASSA
 Ns 225.000000
@@ -21,7 +21,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\KASSA.png
+map_Kd KASSA.png
 
 newmtl Karkunovbox
 Ns 225.000000
@@ -32,7 +32,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\Karkunov.png
+map_Kd Karkunov.png
 
 newmtl Mercibox
 Ns 225.000000
@@ -43,7 +43,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\Merci.png
+map_Kd Merci.png
 
 newmtl None
 Ns 500
@@ -62,7 +62,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\VESY.png
+map_Kd VESY.png
 
 newmtl assorti
 Ns 225.000000
@@ -73,7 +73,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:\\Users\\DUMUD\\Desktop\\блендер\\текстуры\\assorti.png
+map_Kd assorti.png
 
 newmtl blue
 Ns 323.999994
