@@ -59,7 +59,7 @@ function main() {
 	
 	// scene.add(directLight);
 
-	const ambLight = new THREE.AmbientLight( 0x404040, 0.8);
+	const ambLight = new THREE.AmbientLight( 0x404040, 1);
 
 	scene.add(ambLight);
 
