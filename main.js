@@ -32,7 +32,7 @@ function main() {
     });
 
     var lampIntensity = 1;
-    var lampLightDistance = 15;
+    var lampLightDistance = 1;
 
     const lamp = new THREE.AmbientLight(0xffffff, lampIntensity, lampLightDistance);
     lamp.position.set(34, -12, 18);
