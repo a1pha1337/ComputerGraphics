@@ -47,14 +47,14 @@ function main() {
         scene.add(shop);
     });
 
-    var lampIntensity = 0.9;
-    var lampLightDistance = 1;
+    // var lampIntensity = 0.9;
+    // var lampLightDistance = 1;
 
-    const lamp = new THREE.AmbientLight(0xffffff, lampIntensity, lampLightDistance);
-    lamp.position.set(34, -12, 18);
-    lamp.castShadow = true;
+    // const lamp = new THREE.AmbientLight(0xffffff, lampIntensity, lampLightDistance);
+    // lamp.position.set(34, -12, 18);
+    // lamp.castShadow = true;
 
-    scene.add(lamp);
+    // scene.add(lamp);
 
 
 	// Animation loop
