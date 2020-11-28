@@ -42,23 +42,26 @@ function main() {
         scene.add(shop);
     });
 
-	// Lamp light
-	var lampLightIntensity = 0.9;
-	var lampLightDistance = 15;
+	// // Lamp light
+	// var lampLightIntensity = 0.9;
+	// var lampLightDistance = 15;
 
-	const lampLight = new THREE.PointLight( 0xffffff, lampLightIntensity,
-		 lampLightDistance);
-	lampLight.position.set(0, 16, 0);
-	lampLight.castShadow = true;
+	// const lampLight = new THREE.PointLight( 0xffffff, lampLightIntensity,
+	// 	 lampLightDistance);
+	// lampLight.position.set(0, 16, 0);
+	// lampLight.castShadow = true;
 	
-	scene.add(lampLight);
+	// scene.add(lampLight);
 
-	const directLight = new THREE.DirectionalLight(0xffffff, 0.6);
+	// const directLight = new THREE.DirectionalLight(0xffffff, 0.6);
 
-	directLight.position = new THREE.Vector3(0, 1, 2);
+	// directLight.position = new THREE.Vector3(0, 1, 2);
 	
-	scene.add(directLight);
+	// scene.add(directLight);
 
+	const ambLight = new THREE.AmbientLight( 0x404040, 0.5);
+
+	scene.add(ambLight);
 
 	// Animation loop
 	var animate = function() {
