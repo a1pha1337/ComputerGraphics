@@ -31,6 +31,16 @@ function main() {
         scene.add(root);
     });
 
+    var lampIntensity = 1;
+    var lampLightDistance = 15;
+
+    const lamp = new THREE.PointLight(0xffffff, lampIntensity, lampLightDistance);
+    lamp.position.set(0, 5, 0);
+    lamp.castShadow = true;
+
+    scene.add(lamp);
+
+
 	// Animation loop
 	var animate = function() {
 		requestAnimationFrame(animate);
