@@ -25,15 +25,6 @@ function main() {
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
 	controls.update();
 
-    // Create an event listener that resizes the renderer with the browser window.
-    window.addEventListener('resize', function() {
-        var WIDTH = window.innerWidth,
-            HEIGHT = window.innerHeight;
-        renderer.setSize(WIDTH, HEIGHT);
-        camera.aspect = WIDTH / HEIGHT;
-        camera.updateProjectionMatrix();
-        });
-
     const objLoader = new THREE.OBJLoader();
 
     objLoader.load(URL + "objects/shop.obj", (root)=>{
