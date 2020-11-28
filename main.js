@@ -1,7 +1,7 @@
 const WIDTH = window.innerWidth - 15;
 const HEIGHT = window.innerHeight - 100;
 
-const URL = "https://github.com/a1pha1337/ComputerGraphics/"
+const URL = "https://a1pha1337.github.io/ComputerGraphics/"
 
 function main() {
 	// Create scene, camera and render
