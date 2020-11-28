@@ -55,11 +55,11 @@ function main() {
 
 	// Lamp light
 	var lampLightIntensity = 10;
-	var lampLightDistance = 15;
+	var lampLightDistance = 100;
 
 	const Light = new THREE.PointLight( 0xffffff, lampLightIntensity,
 			lampLightDistance);
-	Light.position.set(26.307, 18.166, -3.938);
+	Light.position.set(0, 100, 0);
 	Light.castShadow = true;
 	
 	scene.add(Light);
