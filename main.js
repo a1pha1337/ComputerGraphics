@@ -49,7 +49,7 @@ function main() {
 	var pointLightIntensity = 1;
 	var pointLightDistance = 80;
 	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
-	pointLight.position.set(12, 20, 35);
+	pointLight.position.set(12, 20, 32);
 	pointLight.castShadow = true;
 	pointLight.shadow.radius = LIGHT_SMOOTHING;
 	scene.add(pointLight);
