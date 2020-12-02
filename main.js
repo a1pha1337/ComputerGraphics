@@ -44,7 +44,7 @@ function main() {
 			scene.add(shop);
 		});
 	})
-	var geometry = new THREE.BoxGeometry(width, height, depth);
+	var geometry = new THREE.BoxGeometry(2, 2, 2);
 	var material = new THREE.MeshPhongMaterial({
 		color: 0xffffff,
 		side: THREE.DoubleSide
