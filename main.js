@@ -1,6 +1,8 @@
+// Window size
 const WIDTH = window.innerWidth - 15;
 const HEIGHT = window.innerHeight - 100;
 
+// Camera properties
 const FOV = 90;
 const ASPECT = WIDTH/HEIGHT;
 const NEAR = 0.1;
@@ -39,7 +41,22 @@ function main() {
     loadMTLplusOBJ(URL + "objects/shop.mtl", URL + "objects/shop.obj", (shop)=>{
         shop.position.set(0, 0, 0);
         scene.add(shop);
-    });
+	});
+
+	var width = 5;
+	var height = 5;
+	var depth = 5;
+
+	var geometry = new THREE.BoxGeometry(width, height, depth);
+	var material = new THREE.MeshPhongMaterial({
+		color: 0xffffff,
+		side: THREE.DoubleSide
+	});
+
+	var cube = new THREE.Mesh(geometry, material);
+	cube.position.set(0, 0, 0);
+
+	scene.add(cube);
 
 	const ambLight = new THREE.AmbientLight( 0xffffff, 1);
 	scene.add(ambLight);
