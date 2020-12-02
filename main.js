@@ -61,7 +61,7 @@ function main() {
 
 	var pointLightIntensity = 1;
 	var pointLightDistance = 10;
-	const pointLight = new THREE.pointLight(0xffffff, pointLightIntensity, pointLightDistance);
+	const pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(12, 20, 35);
 	pointLight.castShadow = true;
 	scene.add(pointLight);
