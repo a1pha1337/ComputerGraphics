@@ -39,10 +39,16 @@ function main() {
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
 	controls.update();
     
-    loadMTLplusOBJ(URL + "objects/shop.mtl", URL + "objects/shop.obj", (shop)=>{
-        shop.position.set(0, 0, 0);
-        scene.add(shop);
-	});
+    // loadMTLplusOBJ(URL + "objects/shop.mtl", URL + "objects/shop.obj", (shop)=>{
+    //     shop.position.set(0, 0, 0);
+    //     scene.add(shop);
+	// });
+
+	var loader = new THREE.OBJMTLLoader();
+	loader.load(URL + "objects/shop.obj", URL + "objects/shop.mtl", (shop)=>{
+		shop.position.set(0, 0, 0);
+		scene.add(shop);
+	})
 
 	// The first outside lamp
 	var pointLightIntensity = 1;
