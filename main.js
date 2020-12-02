@@ -44,6 +44,16 @@ function main() {
 			scene.add(shop);
 		});
 	})
+	var geometry = new THREE.BoxGeometry(width, height, depth);
+	var material = new THREE.MeshPhongMaterial({
+		color: 0xffffff,
+		side: THREE.DoubleSide
+	});
+
+	var cube = new THREE.Mesh(geometry, material);
+	cube.receiveShadow = true;
+	cube.position.set(12, 20, 32);
+	scene.add(cube);
 
 	// The first outside lamp
 	var pointLightIntensity = 1;
