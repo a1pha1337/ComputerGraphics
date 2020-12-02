@@ -30,12 +30,12 @@ function main() {
 	controls.update();
 
 	var mtlLoader = new THREE.MTLLoader();
-	mtlLoader.load(SOURCE + "objects/shop.mtl", (materials)=>{
+	mtlLoader.load(SOURCE + "objects/shop.mtl", (materials) => {
 		materials.preload();
 
 		var objLoader = new THREE.OBJLoader();
 		objLoader.setMaterials(materials);
-		objLoader.load(SOURCE + "objects/shop.obj", (shop)=>{
+		objLoader.load(SOURCE + "objects/shop.obj", (shop) => {
 			shop.position.set(0, 0, 0);
 			shop.traverse((child)=>{
 				child.castShadow = true;
@@ -55,7 +55,7 @@ function main() {
 	// cube.position.set(32, 20, 13);
 	// scene.add(cube);
 
-	// The first outside lamp
+	// The first outside light
 	var pointLightIntensity = 1;
 	var pointLightDistance = 50;
 	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
@@ -64,7 +64,7 @@ function main() {
 	pointLight.shadow.radius = LIGHT_SMOOTHING;
 	scene.add(pointLight);
 
-	// The second outside lamp
+	// The second outside light
 	var pointLightIntensity = 1;
 	var pointLightDistance = 50;
 	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
@@ -73,7 +73,7 @@ function main() {
 	pointLight.shadow.radius = LIGHT_SMOOTHING;
 	scene.add(pointLight);
 
-	// Inside lamp
+	// Inside light
 	var pointLightIntensity = 1;
 	var pointLightDistance = 20;
 	var pointLight = new THREE.PointLight(0xfffacd, pointLightIntensity, pointLightDistance);
@@ -88,7 +88,7 @@ function main() {
 	scene.add(ambLight);
 
 	// Animation loop
-	var animate = function() {
+	var animate = () => {
 		requestAnimationFrame(animate);
 
 		controls.update();
