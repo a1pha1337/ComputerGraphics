@@ -8,7 +8,7 @@ const ASPECT = WIDTH/HEIGHT;
 const NEAR = 0.1;
 const FAR = 1000;
 
-const LIGHT_SMOOTHING = 8;
+const LIGHT_SMOOTHING = 16;
 
 const SOURCE = "https://a1pha1337.github.io/ComputerGraphics/"
 
