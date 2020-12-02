@@ -12,13 +12,13 @@ const SOURCE = "https://a1pha1337.github.io/ComputerGraphics/"
 
 function main() {
 	// Create scene, camera and renderer
-	let scene = new THREE.Scene();
+	var scene = new THREE.Scene();
     scene.background = new THREE.Color(0xAAAAAA);
     
-	let camera = new THREE.PerspectiveCamera(FOV, ASPECT, NEAR, FAR);
+	var camera = new THREE.PerspectiveCamera(FOV, ASPECT, NEAR, FAR);
 	camera.position.z = -5;
 
-    let renderer = new THREE.WebGLRenderer();
+    var renderer = new THREE.WebGLRenderer();
     renderer.setSize(WIDTH, HEIGHT);
     renderer.shadowMap.enabled = true;
     document.body.appendChild(renderer.domElement);
@@ -27,11 +27,11 @@ function main() {
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
 	controls.update();
 
-	let mtlLoader = new THREE.MTLLoader();
+	var mtlLoader = new THREE.MTLLoader();
 	mtlLoader.load(SOURCE + "objects/shop.mtl", (materials)=>{
 		materials.preload();
 
-		let objLoader = new THREE.OBJLoader();
+		var objLoader = new THREE.OBJLoader();
 		objLoader.setMaterials(materials);
 		objLoader.load(SOURCE + "objects/shop.obj", (shop)=>{
 			shop.position.set(0, 0, 0);
@@ -44,36 +44,36 @@ function main() {
 	})
 
 	// The first outside lamp
-	let pointLightIntensity = 1;
-	let pointLightDistance = 80;
-	let pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
+	var pointLightIntensity = 1;
+	var pointLightDistance = 80;
+	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(12, 20, 35);
 	pointLight.castShadow = true;
 	scene.add(pointLight);
 
 	// The second outside lamp
-	let pointLightIntensity = 1;
-	let pointLightDistance = 80;
-	let pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
+	var pointLightIntensity = 1;
+	var pointLightDistance = 80;
+	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(34, 20, 13);
 	pointLight.castShadow = true;
 	scene.add(pointLight);
 
 	// Inside lamp
-	let pointLightIntensity = 1;
-	let pointLightDistance = 20;
-	let pointLight = new THREE.PointLight(0xfffacd, pointLightIntensity, pointLightDistance);
+	var pointLightIntensity = 1;
+	var pointLightDistance = 20;
+	var pointLight = new THREE.PointLight(0xfffacd, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(0, 15, 0);
 	pointLight.castShadow = true;
 	scene.add(pointLight);
 
 	// Ambient light
-	let ambLightIntensity = 0.3;
-	let ambLight = new THREE.AmbientLight( 0xffffff, ambLightIntensity);
+	var ambLightIntensity = 0.3;
+	var ambLight = new THREE.AmbientLight( 0xffffff, ambLightIntensity);
 	scene.add(ambLight);
 
 	// Animation loop
-	let animate = function() {
+	var animate = function() {
 		requestAnimationFrame(animate);
 
 		controls.update();
