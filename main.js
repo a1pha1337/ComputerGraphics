@@ -1,5 +1,5 @@
-const WIDTH = window.innerWidth;
-const HEIGHT = window.innerHeight;
+const WIDTH = window.innerWidth - 15;
+const HEIGHT = window.innerHeight - 100;
 
 const FOV = 90;
 const ASPECT = WIDTH/HEIGHT;
