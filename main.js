@@ -31,7 +31,7 @@ function main() {
 	mtlLoader.load(SOURCE + "objects/shop.mtl", (materials)=>{
 		materials.preload();
 
-		var objLoader = new THREE.objLoader();
+		var objLoader = new THREE.OBJLoader();
 		objLoader.setMaterials(materials);
 		objLoader.load(SOURCE + "objects/shop.obj", (shop)=>{
 			shop.position.set(0, 0, 0);
