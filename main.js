@@ -55,11 +55,19 @@ function main() {
 	});
 
 	var cube = new THREE.Mesh(geometry, material);
-	cube.position.set(12, 20, 35);
+	cube.position.set(30, 20, 35);
 
 	scene.add(cube);
 
-	const ambLight = new THREE.AmbientLight( 0xffffff, 1);
+	var pointLightIntensity = 1;
+	var pointLightDistance = 10;
+	const pointLight = new THREE.pointLight(0xffffff, pointLightIntensity, pointLightDistance);
+	pointLight.position.set(12, 20, 35);
+	pointLight.castShadow = true;
+	scene.add(pointLight);
+
+	var ambLightIntensity = 0.2;
+	const ambLight = new THREE.AmbientLight( 0xffffff, ambLightIntensity);
 	scene.add(ambLight);
 
 	// Animation loop
