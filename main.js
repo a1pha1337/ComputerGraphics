@@ -44,6 +44,9 @@ function main() {
 	var pointLightDistance = 80;
 	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(12, 20, 35);
+	pointLight.traverse((child)=>{
+		child.castShadow = true;
+	})
 	scene.add(pointLight);
 
 	// The second outside lamp
@@ -51,6 +54,9 @@ function main() {
 	var pointLightDistance = 80;
 	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(34, 20, 13);
+	pointLight.traverse((child)=>{
+		child.castShadow = true;
+	})
 	scene.add(pointLight);
 
 	// Inside lamp
@@ -58,12 +64,15 @@ function main() {
 	var pointLightDistance = 20;
 	var pointLight = new THREE.PointLight(0xfffacd, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(0, 15, 0);
+	pointLight.traverse((child)=>{
+		child.castShadow = true;
+	})
 	scene.add(pointLight);
 
-	// // Ambient light
-	// var ambLightIntensity = 0.2;
-	// var ambLight = new THREE.AmbientLight( 0xffffff, ambLightIntensity);
-	// scene.add(ambLight);
+	// Ambient light
+	var ambLightIntensity = 0.2;
+	var ambLight = new THREE.AmbientLight( 0xffffff, ambLightIntensity);
+	scene.add(ambLight);
 
 	// Animation loop
 	var animate = function() {
