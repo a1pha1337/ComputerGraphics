@@ -55,7 +55,7 @@ function main() {
 	});
 
 	var cube = new THREE.Mesh(geometry, material);
-	cube.position.set(10, 30, 20);
+	cube.position.set(10, 30, 30);
 
 	scene.add(cube);
 
