@@ -40,6 +40,7 @@ function main() {
 	// controls.update();
 	
 	const controls = new THREE.FirstPersonControls(camera, renderer.domElement);
+	controls.update();
     
     loadMTLplusOBJ(URL + "objects/shop.mtl", URL + "objects/shop.obj", (shop)=>{
         shop.position.set(0, 0, 0);
