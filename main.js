@@ -8,19 +8,7 @@ const ASPECT = WIDTH/HEIGHT;
 const NEAR = 0.1;
 const FAR = 1000;
 
-const URL = "https://a1pha1337.github.io/ComputerGraphics/"
-
-// Load .obj model with .mtl
-function loadMTLplusOBJ(mtlURL, objURL, onLoad) {
-	const objLoader = new THREE.OBJLoader();
-	const mtlLoader = new THREE.MTLLoader();
-	mtlLoader.load(mtlURL, (materials) => {
-		materials.preload();
-		objLoader.setMaterials(materials);
-		
-		objLoader.load(objURL, onLoad);
-	})
-}
+const SOURCE = "https://a1pha1337.github.io/ComputerGraphics/"
 
 function main() {
 	// Create scene, camera and render
@@ -38,17 +26,19 @@ function main() {
     // OrbitControls
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
 	controls.update();
-    
-    // loadMTLplusOBJ(URL + "objects/shop.mtl", URL + "objects/shop.obj", (shop)=>{
-    //     shop.position.set(0, 0, 0);
-    //     scene.add(shop);
-	// });
 
-	var loader = new THREE.OBJMTLLoader();
-	loader.load(URL + "objects/shop.obj", URL + "objects/shop.mtl", (shop)=>{
-		shop.position.set(0, 0, 0);
-		scene.add(shop);
+	var mtlLoader = new THREE.MTLLoader();
+	mtlLoader.load(SOURCE + "objects/shop.mtl", (materials)=>{
+		materials.preload();
+
+		var objLoader = new THREE.objLoader();
+		objLoader.setMaterials(materials);
+		objLoader.load(SOURCE + "objects/shop.obj", (shop)=>{
+			shop.position.set(0, 0, 0);
+			scene.add(shop);
+		});
 	})
+
 
 	// The first outside lamp
 	var pointLightIntensity = 1;
