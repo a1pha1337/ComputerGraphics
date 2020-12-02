@@ -59,10 +59,19 @@ function main() {
 
 	scene.add(cube);
 
+	// The first outside lamp
 	var pointLightIntensity = 1;
 	var pointLightDistance = 80;
 	const pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(12, 20, 35);
+	pointLight.castShadow = true;
+	scene.add(pointLight);
+
+	// The second outside lamp
+	var pointLightIntensity = 1;
+	var pointLightDistance = 80;
+	const pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
+	pointLight.position.set(34, 20, 13);
 	pointLight.castShadow = true;
 	scene.add(pointLight);
 
