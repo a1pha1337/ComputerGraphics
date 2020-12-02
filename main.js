@@ -11,14 +11,14 @@ const FAR = 1000;
 const URL = "https://a1pha1337.github.io/ComputerGraphics/"
 
 // Load .obj model with .mtl
-function loadMTLplusOBJ(mtlURL, objURL, loadFunction) {
+function loadMTLplusOBJ(mtlURL, objURL, onLoad) {
 	const objLoader = new THREE.OBJLoader();
 	const mtlLoader = new THREE.MTLLoader();
 	mtlLoader.load(mtlURL, (materials) => {
 		materials.preload();
 		objLoader.setMaterials(materials);
 		
-		objLoader.load(objURL, loadFunction);
+		objLoader.load(objURL, onLoad);
 	})
 }
 
@@ -35,7 +35,7 @@ function main() {
     renderer.shadowMap.enabled = true;
     document.body.appendChild(renderer.domElement);
 
-    // Camera controls
+    // OrbitControls
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.update();
     
