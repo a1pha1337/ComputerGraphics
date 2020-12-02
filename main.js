@@ -69,10 +69,10 @@ function main() {
 	})
 	scene.add(pointLight);
 
-	// Ambient light
-	var ambLightIntensity = 0.2;
-	var ambLight = new THREE.AmbientLight( 0xffffff, ambLightIntensity);
-	scene.add(ambLight);
+	// // Ambient light
+	// var ambLightIntensity = 0.2;
+	// var ambLight = new THREE.AmbientLight( 0xffffff, ambLightIntensity);
+	// scene.add(ambLight);
 
 	// Animation loop
 	var animate = function() {
