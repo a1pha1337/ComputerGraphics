@@ -44,27 +44,11 @@ function main() {
         scene.add(shop);
 	});
 
-	var width = 5;
-	var height = 5;
-	var depth = 5;
-
-	var geometry = new THREE.BoxGeometry(width, height, depth);
-	var material = new THREE.MeshPhongMaterial({
-		color: 0xffffff,
-		side: THREE.DoubleSide
-	});
-
-	var cube = new THREE.Mesh(geometry, material);
-	cube.position.set(0, 15, 0);
-
-	scene.add(cube);
-
 	// The first outside lamp
 	var pointLightIntensity = 1;
 	var pointLightDistance = 80;
 	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(12, 20, 35);
-	pointLight.castShadow = true;
 	scene.add(pointLight);
 
 	// The second outside lamp
@@ -72,7 +56,6 @@ function main() {
 	var pointLightDistance = 80;
 	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(34, 20, 13);
-	pointLight.castShadow = true;
 	scene.add(pointLight);
 
 	// Inside lamp
@@ -80,7 +63,6 @@ function main() {
 	var pointLightDistance = 20;
 	var pointLight = new THREE.PointLight(0xfffacd, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(0, 15, 0);
-	pointLight.castShadow = true;
 	scene.add(pointLight);
 
 	// Ambient light
