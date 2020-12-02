@@ -62,7 +62,7 @@ function main() {
 	// The first outside lamp
 	var pointLightIntensity = 1;
 	var pointLightDistance = 80;
-	const pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
+	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(12, 20, 35);
 	pointLight.castShadow = true;
 	scene.add(pointLight);
@@ -70,11 +70,12 @@ function main() {
 	// The second outside lamp
 	var pointLightIntensity = 1;
 	var pointLightDistance = 80;
-	const pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
+	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(34, 20, 13);
 	pointLight.castShadow = true;
 	scene.add(pointLight);
 
+	// Ambient light
 	var ambLightIntensity = 0.2;
 	const ambLight = new THREE.AmbientLight( 0xffffff, ambLightIntensity);
 	scene.add(ambLight);
