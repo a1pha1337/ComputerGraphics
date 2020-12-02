@@ -27,7 +27,7 @@ function main() {
 	var scene = new THREE.Scene();
     scene.background = new THREE.Color(0xAAAAAA);
     
-	var camera = new THREE.PerspectiveCamera(FOV, ASPECT, NEAR, FAR);
+	const camera = new THREE.PerspectiveCamera(FOV, ASPECT, NEAR, FAR);
 	camera.position.z = -5;
 
     var renderer = new THREE.WebGLRenderer();
@@ -75,9 +75,17 @@ function main() {
 	pointLight.castShadow = true;
 	scene.add(pointLight);
 
+	// Inside lamp
+	var pointLightIntensity = 1;
+	var pointLightDistance = 20;
+	var pointLight = new THREE.PointLight(0xfffacd, pointLightIntensity, pointLightDistance);
+	pointLight.position.set(0, 15, 0);
+	pointLight.castShadow = true;
+	scene.add(pointLight);
+
 	// Ambient light
 	var ambLightIntensity = 0.2;
-	const ambLight = new THREE.AmbientLight( 0xffffff, ambLightIntensity);
+	var ambLight = new THREE.AmbientLight( 0xffffff, ambLightIntensity);
 	scene.add(ambLight);
 
 	// Animation loop
