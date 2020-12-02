@@ -60,7 +60,7 @@ function main() {
 	scene.add(cube);
 
 	var pointLightIntensity = 1;
-	var pointLightDistance = 10;
+	var pointLightDistance = 40;
 	const pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
 	pointLight.position.set(12, 20, 35);
 	pointLight.castShadow = true;
