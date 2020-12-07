@@ -44,7 +44,7 @@ function main() {
 			scene.add(shop);
 		});
 	})
-	var geometry = new THREE.BoxGeometry(0, 0, 0);
+	var geometry = new THREE.BoxGeometry(2, 2, 2);
 	var material = new THREE.MeshPhongMaterial({
 		color: 0xffffff,
 		side: THREE.DoubleSide
@@ -52,7 +52,7 @@ function main() {
 
 	var cube = new THREE.Mesh(geometry, material);
 	cube.receiveShadow = true;
-	cube.position.set(32, 20, 13);
+	cube.position.set(0, 0, 0);
 	scene.add(cube);
 
 	// The first outside light
