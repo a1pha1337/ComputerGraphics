@@ -1,6 +1,6 @@
 // Window size
-const WIDTH = window.innerWidth - 15;
-const HEIGHT = window.innerHeight - 100;
+const WIDTH = window.innerWidth;
+const HEIGHT = window.innerHeight;
 
 // Camera properties
 const FOV = 90;
@@ -8,7 +8,7 @@ const ASPECT = WIDTH/HEIGHT;
 const NEAR = 0.1;
 const FAR = 1000;
 
-const LIGHT_SMOOTHING = 10000;
+const LIGHT_SMOOTHING = 20000;
 
 const SOURCE = "https://a1pha1337.github.io/ComputerGraphics/"
 
