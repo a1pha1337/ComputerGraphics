@@ -52,14 +52,14 @@ function main() {
 
 	var cube = new THREE.Mesh(geometry, material);
 	cube.receiveShadow = true;
-	cube.position.set(4, 19, 25);
+	cube.position.set(-10, 15, -10);
 	scene.add(cube);
 
 	// The first outside light
 	var pointLightIntensity = 1;
 	var pointLightDistance = 50;
 	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
-	pointLight.position.set(12, 20, 32);
+	pointLight.position.set(4, 19, 26);
 	pointLight.castShadow = true;
 	pointLight.shadow.radius = LIGHT_SMOOTHING;
 	scene.add(pointLight);
