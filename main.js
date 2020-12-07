@@ -44,16 +44,16 @@ function main() {
 			scene.add(shop);
 		});
 	})
-	var geometry = new THREE.BoxGeometry(2, 2, 2);
-	var material = new THREE.MeshPhongMaterial({
-		color: 0xffffff,
-		side: THREE.DoubleSide
-	});
+	// var geometry = new THREE.BoxGeometry(2, 2, 2);
+	// var material = new THREE.MeshPhongMaterial({
+	// 	color: 0xffffff,
+	// 	side: THREE.DoubleSide
+	// });
 
-	var cube = new THREE.Mesh(geometry, material);
-	cube.receiveShadow = true;
-	cube.position.set(-10, 15, -10);
-	scene.add(cube);
+	// var cube = new THREE.Mesh(geometry, material);
+	// cube.receiveShadow = true;
+	// cube.position.set(-10, 15, -10);
+	// scene.add(cube);
 
 	// The first outside light
 	var pointLightIntensity = 1;
@@ -76,8 +76,8 @@ function main() {
 	// Inside light
 	var pointLightIntensity = 1;
 	var pointLightDistance = 20;
-	var pointLight = new THREE.PointLight(0xfffacd, pointLightIntensity, pointLightDistance);
-	pointLight.position.set(0, 15, 0);
+	var pointLight = new THREE.PointLight(0xffffff, pointLightIntensity, pointLightDistance);
+	pointLight.position.set(-10, 16, -10);
 	pointLight.castShadow = true;
 	pointLight.shadow.radius = LIGHT_SMOOTHING;
 	scene.add(pointLight);
