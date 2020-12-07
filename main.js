@@ -8,27 +8,31 @@ const ASPECT = WIDTH/HEIGHT;
 const NEAR = 0.1;
 const FAR = 1000;
 
+// Shadows smoothing
 const LIGHT_SMOOTHING = 20000;
 
 const SOURCE = "https://a1pha1337.github.io/ComputerGraphics/"
 
 function main() {
-	// Create scene, camera and renderer
+	// Create scene
 	var scene = new THREE.Scene();
     scene.background = new THREE.Color(0xAAAAAA);
-    
+	
+	// Create camera
 	var camera = new THREE.PerspectiveCamera(FOV, ASPECT, NEAR, FAR);
 	camera.position.z = -5;
 
+	// Create renderer
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize(WIDTH, HEIGHT);
     renderer.shadowMap.enabled = true;
     document.body.appendChild(renderer.domElement);
 
-    // OrbitControls
+    // Create OrbitControls
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
 	controls.update();
 
+	// Load object with material
 	var mtlLoader = new THREE.MTLLoader();
 	mtlLoader.load(SOURCE + "objects/shop.mtl", (materials) => {
 		materials.preload();
@@ -37,6 +41,8 @@ function main() {
 		objLoader.setMaterials(materials);
 		objLoader.load(SOURCE + "objects/shop.obj", (shop) => {
 			shop.position.set(0, 0, 0);
+
+			// Shadows properties
 			shop.traverse((child)=>{
 				child.castShadow = true;
 				child.receiveShadow = true;
