@@ -52,7 +52,7 @@ function main() {
 
 	var cube = new THREE.Mesh(geometry, material);
 	cube.receiveShadow = true;
-	cube.position.set(10, 19, 25);
+	cube.position.set(4, 19, 25);
 	scene.add(cube);
 
 	// The first outside light
